@@ -17,4 +17,6 @@ public interface UserMapper {
     List<Car> queryCarByUserId(Integer userId);
 
     void insertUser(User user);
+
+    void deleteUser(Integer userId);
 }

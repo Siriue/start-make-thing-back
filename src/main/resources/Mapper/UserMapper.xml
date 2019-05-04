@@ -33,4 +33,8 @@
     <insert id="insertUser">
         insert into user (userName, sex, birthday, tel, comment) values (#{userName},#{sex},#{birthday},#{tel},#{comment})
     </insert>
+    
+    <delete id="deleteUser">
+        delete from user where id = #{userId}
+    </delete>
 </mapper>
