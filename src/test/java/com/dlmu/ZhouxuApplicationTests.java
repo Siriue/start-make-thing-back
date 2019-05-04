@@ -1,4 +1,4 @@
-package com.dlmu.zhouxu;
+package com.dlmu;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
