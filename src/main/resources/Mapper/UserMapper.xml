@@ -37,4 +37,8 @@
     <delete id="deleteUser">
         delete from user where id = #{userId}
     </delete>
+
+    <update id="updateUser">
+        update user set userName = #{userName}, sex = #{sex}, birthday = #{birthday}, tel = #{tel}, comment = #{comment} where id = #{userId}
+    </update>
 </mapper>
