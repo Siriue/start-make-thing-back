@@ -41,4 +41,16 @@
     <update id="updateUser">
         update user set userName = #{userName}, sex = #{sex}, birthday = #{birthday}, tel = #{tel}, comment = #{comment} where id = #{userId}
     </update>
+
+    <select id="queryAllCar" resultMap="carMap">
+        select * from car
+    </select>
+
+    <insert id="addCarByUserId">
+        insert into relation (userId, carId) values (#{userId}, #{carId})
+    </insert>
+
+    <delete id="deleteRelation">
+        delete from relation where userId = #{userId} and carId = #{carId}
+    </delete>
 </mapper>

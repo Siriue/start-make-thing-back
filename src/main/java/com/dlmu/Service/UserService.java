@@ -2,6 +2,7 @@ package com.dlmu.Service;
 
 import com.dlmu.Dao.UserMapper;
 import com.dlmu.Entity.Car;
+import com.dlmu.Entity.Relation;
 import com.dlmu.Entity.User;
 import com.dlmu.VO.UserVO;
 import org.springframework.stereotype.Service;
@@ -39,5 +40,15 @@ public class UserService {
 
     public void updateUser(User user) {
         userMapper.updateUser(user);
+    }
+
+    public List<Car> queryAllCar() {return userMapper.queryAllCar();}
+
+    public void addCarByUserId(Integer userId, Integer carId) {
+        userMapper.addCarByUserId(userId, carId);
+    }
+
+    public void deleteRelation(Relation relation) {
+        userMapper.deleteRelation(relation);
     }
 }

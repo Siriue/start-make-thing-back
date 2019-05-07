@@ -1,5 +1,7 @@
 package com.dlmu.Controller;
 
+import com.dlmu.Entity.Car;
+import com.dlmu.Entity.Relation;
 import com.dlmu.Entity.User;
 import com.dlmu.Entity.UserPass;
 import com.dlmu.Service.UserService;
@@ -39,5 +41,20 @@ public class UserController {
     @PostMapping("/user/update")
     void updateUser(@RequestBody User user) {
         userService.updateUser(user);
+    }
+
+    @PostMapping("/user/queryAllCar")
+    List<Car> queryAllCar() {
+        return userService.queryAllCar();
+    }
+
+    @PostMapping("/user/addCarByUserId")
+    void addCarByUserId(@RequestBody Relation relation) {
+        userService.addCarByUserId(relation.getUserId(), relation.getCarId());
+    }
+
+    @PostMapping("/user/deleteRelation")
+    void deleteRelation(@RequestBody Relation relation) {
+        userService.deleteRelation(relation);
     }
 }
